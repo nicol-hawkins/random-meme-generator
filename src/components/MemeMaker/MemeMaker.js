@@ -11,11 +11,14 @@ class MemeMaker extends Component {
 					randomImg: 'http://i.imgflip.com/1bij.jpg',
 					memeImgs: []
 				};
-				console.log(this.state.memeImg)
+				//Bind handleChange method to the constructor
+				this.handleChange = this.handleChange.bind(this)
 		}
 		
+		//Fetch meme data from API and setState
 		componentDidMount() {
 			fetch("https://api.imgflip.com/get_memes")
+			//Turn promise into JSON object
 			.then(response => response.json())
 			.then(response => {
 				const { memes } = response.data
@@ -28,16 +31,33 @@ class MemeMaker extends Component {
 
     getMeme() {
         console.log('clicked')
-      }
+			}
+			
+		handleChange(ev) {
+			
+		}
 
     render() {
         return (
             <div>
-            	<div className="memeButtonDiv">
-                <button onClick={this.getMeme} type="button" className="button">Click Me</button>
-            </div>
-              <h3>(Meme's go here)</h3>
-          </div>
+							<form className="memeForm">
+								<input
+									type="text"
+									name="topText"
+									value={this.state.topText}
+									onChange={this.handleChange}
+								/>
+								<input
+									type="text"
+									name="bottomText"
+									value={this.state.bottomText}
+									onChange={this.handleChange}
+								/>            	
+                <button onClick={this.getMeme} type="button" className="button">Generate</button>
+							</form>
+					  </div>
+              
+         
         )
     }
 
