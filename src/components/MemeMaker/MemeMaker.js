@@ -28,10 +28,6 @@ class MemeMaker extends Component {
 				console.log(this.state.memeImgs[0])
 			})
 		};
-
-    getMeme() {
-        console.log('clicked')
-			}
 			
 		handleChange(ev) {
 			console.log('handleChange')
@@ -39,6 +35,9 @@ class MemeMaker extends Component {
 			this.setState({
 				[name]: value
 			})
+		}
+
+		handleSubmit(ev) {
 
 		}
 
@@ -52,18 +51,23 @@ class MemeMaker extends Component {
 										name="topText"
 										value={this.state.topText}
 										onChange={this.handleChange}
+										placeholder="Top Text"
 									/>
-								</div>
-								<div>
 									<input
 										type="text"
 										name="bottomText"
 										value={this.state.bottomText}
 										onChange={this.handleChange}
+										placeholder="Bottom Text"
 									/> 
 								</div>           	
                 <button onClick={this.getMeme} type="button" className="button">Generate</button>
 							</form>
+							<div className="meme">
+								<img src={this.state.randomImg} alt='' />
+								<h2 className="top">{this.state.topText}</h2>
+								<h2 className="bottom">{this.state.bottomText}</h2>
+							</div>
 					  </div>
               
          
