@@ -51,7 +51,7 @@ class MemeMaker extends Component {
 
     render() {
         return (
-            <div>
+            <div className="mainPage">
 							<form className="memeForm" onSubmit={this.handleSubmit}>
 								<div>
 									<input
@@ -61,6 +61,8 @@ class MemeMaker extends Component {
 										onChange={this.handleChange}
 										placeholder="Top Text"
 									/>
+									</div>
+									<div>
 									<input
 										type="text"
 										name="bottomText"
@@ -72,7 +74,7 @@ class MemeMaker extends Component {
                 <button className="button">Generate</button>
 							</form>
 							<div className="meme">
-								<img src={this.state.randomImg} alt='' />
+								<img src={this.state.randomImg} className="randomMeme" alt='' />
 								<h2 className="top">{this.state.topText}</h2>
 								<h2 className="bottom">{this.state.bottomText}</h2>
 							</div>

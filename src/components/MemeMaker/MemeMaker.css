@@ -27,6 +27,8 @@
 
 form {
   text-align: center;
+  margin-left: 21vw;
+  margin-top: 12vh;
 }
   
 input {
@@ -42,6 +44,7 @@ input:focus {
   margin: auto;
   text-align: center;
   position: relative;
+ 
 }
 
 h2 {
@@ -72,5 +75,15 @@ h2 {
 
 .bottom {
   bottom: 0;
+}
+
+.mainPage {
+  display: flex;
+}
+
+.randomMeme {
+  width: 36vw;
+  height: auto;
+  margin-top: 3vh;
 }
   
