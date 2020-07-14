@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './MemeMaker.css';
 
 //Class based component deals with state and API calls
 class MemeMaker extends Component {
@@ -15,7 +16,7 @@ class MemeMaker extends Component {
         return (
             <div>
             	<div className="memeButtonDiv">
-                <button onClick={this.getMeme} type="button" class="btn btn-dark">Click Me</button>
+                <button onClick={this.getMeme} type="button" class="button">Click Me</button>
             </div>
               <h3>(Meme's go here)</h3>
           </div>
