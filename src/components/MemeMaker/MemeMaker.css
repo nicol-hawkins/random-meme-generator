@@ -24,6 +24,10 @@
 .button:focus {
 		outline:0;
   }
+
+form {
+  text-align: center;
+}
   
 input {
   margin-top: 5vh;
