@@ -14,12 +14,10 @@ class MemeMaker extends Component {
     render() {
         return (
             <div>
-                <div className="memeButtonDiv">
-                    <button onClick={this.getMeme} className="memeButton">
-                        Click Me
-                    </button>
-                </div>
-                <h1>Meme's go here</h1>
+            	<div className="memeButtonDiv">
+                <button onClick={this.getMeme} type="button" class="btn btn-dark">Click Me</button>
+            </div>
+              <h3>(Meme's go here)</h3>
           </div>
         )
     }

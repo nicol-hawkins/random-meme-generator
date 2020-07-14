@@ -1,5 +1,5 @@
 .App-header {
-    background: url('abstract.jpg');
+    background: url('teal-white.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -10,5 +10,6 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    -webkit-text-stroke: .5px black;
     
   }
