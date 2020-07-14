@@ -3,8 +3,6 @@ import './App.css';
 
 class App extends Component {
 
-  
-
   componentDidMount() {
     fetch("https://cors-anywhere.herokuapp.com/https://ronreiter-meme-generator.p.rapidapi.com/meme?font=Impact&font_size=50&meme=Condescending-Wonka&top=Top%20text&bottom=Bottom%20text",
       {
@@ -22,6 +20,10 @@ class App extends Component {
       });
   }
 
+  getMeme() {
+    console.log('clicked')
+  }
+
   
   
 
@@ -31,7 +33,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Meme Generator</h1>
           <div className="memeButtonDiv">
-            <button className="memeButton">
+            <button onClick={this.getMeme} className="memeButton">
               Click Me
             </button>
           </div>
