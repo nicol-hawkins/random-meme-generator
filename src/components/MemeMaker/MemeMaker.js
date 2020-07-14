@@ -11,8 +11,9 @@ class MemeMaker extends Component {
 					randomImg: 'http://i.imgflip.com/1bij.jpg',
 					memeImgs: []
 				};
-				//Bind handleChange method to the constructor
+				//Bind handle method's to the constructor
 				this.handleChange = this.handleChange.bind(this)
+				this.handleSubmit = this.handleSubmit.bind(this)
 		}
 		
 		//Fetch meme data from API and setState
@@ -37,14 +38,21 @@ class MemeMaker extends Component {
 			})
 		}
 
+		//Need to add prevent default to prevent page refresh
 		handleSubmit(ev) {
-
+			ev.preventDefault()
+			const randomNum = Math.floor(Math.random() * this.state.memeImgs.length);
+			const randomMemeImg = this.state.memeImgs[randomNum].url;
+			this.setState({
+				randomImg: randomMemeImg
+			})
+			console.log(this.state.randomImg)
 		}
 
     render() {
         return (
             <div>
-							<form className="memeForm">
+							<form className="memeForm" onSubmit={this.handleSubmit}>
 								<div>
 									<input
 										type="text"
@@ -61,7 +69,7 @@ class MemeMaker extends Component {
 										placeholder="Bottom Text"
 									/> 
 								</div>           	
-                <button onClick={this.getMeme} type="button" className="button">Generate</button>
+                <button className="button">Generate</button>
 							</form>
 							<div className="meme">
 								<img src={this.state.randomImg} alt='' />
