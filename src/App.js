@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Header from './components/Header/Header';
+import MemeMaker from './components/MemeMaker/MemeMaker';
+
 class App extends Component {
 
   componentDidMount() {
@@ -20,24 +23,11 @@ class App extends Component {
       });
   }
 
-  getMeme() {
-    console.log('clicked')
-  }
-
-  
-  
-
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Meme Generator</h1>
-          <div className="memeButtonDiv">
-            <button onClick={this.getMeme} className="memeButton">
-              Click Me
-            </button>
-          </div>
-        </header>
+        <Header/>
+        <MemeMaker/>        
       </div>
     );
   }
