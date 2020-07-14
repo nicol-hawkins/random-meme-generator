@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css';
 
 //Function component since it will only display data
 function Header() {
