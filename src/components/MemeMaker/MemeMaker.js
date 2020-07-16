@@ -4,11 +4,11 @@ import './MemeMaker.css';
 //Class based component deals with state and API calls
 class MemeMaker extends Component {
     constructor() {
-        super();
+    	super();
         this.state = {
 					topText: '',
 					bottomText: '',
-					randomImg: 'http://i.imgflip.com/1bij.jpg',
+					randomImg: 'https://i.imgflip.com/4t0m5.jpg',
 					memeImgs: []
 				};
 				//Bind handle method's to the constructor
@@ -26,10 +26,12 @@ class MemeMaker extends Component {
 				this.setState({
 					memeImgs: memes
 				})
+				//Log first item in response.data to view successful fetch
 				console.log(this.state.memeImgs[0])
 			})
 		};
-			
+		
+		//Write event target function for form 
 		handleChange(ev) {
 			console.log('handleChange')
 			const {name, value} = ev.target
@@ -46,8 +48,7 @@ class MemeMaker extends Component {
 			this.setState({
 				randomImg: randomMemeImg
 			})
-			console.log(this.state.randomImg)
-		}
+		};
 
     render() {
         return (
@@ -78,11 +79,9 @@ class MemeMaker extends Component {
 								<h2 className="top">{this.state.topText}</h2>
 								<h2 className="bottom">{this.state.bottomText}</h2>
 							</div>
-					  </div>
-              
-         
+					  </div>         
         )
-    }
+    };
 
 };
 

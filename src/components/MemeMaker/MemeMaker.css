@@ -1,3 +1,8 @@
+
+.mainPage {
+  display: flex;
+}
+
 .button {
     padding: 10px 20px;
     font-size: 20px;
@@ -5,14 +10,14 @@
     cursor: pointer;
     outline: none;
     color: #fff;
-    background: url('./rolling-dices.png');
+    background: black;
     border: none;
     border-radius: 15px;
 		box-shadow: 0 9px #999;
 		margin: 6vh;
 	}
 
-.button:hover {
+button:hover {
     background-color: rgb(58, 70, 58)
 	}
 
@@ -33,7 +38,7 @@ form {
   
 input {
   margin-top: 5vh;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 input:focus {
@@ -47,11 +52,19 @@ input:focus {
  
 }
 
+.randomMeme {
+  width: 38vw;
+  height: 30vh;
+  height: auto;
+  margin-top: 3vh;
+  box-shadow: 5px 10px 18px #888888;
+}
+
 h2 {
   position: absolute;
   left: 0;
   right: 0;
-  margin: 15px 0;
+  margin: 27px 0;
   font-family: impact;
   font-size: 2.5em;
   text-transform: uppercase;
@@ -77,13 +90,7 @@ h2 {
   bottom: 0;
 }
 
-.mainPage {
-  display: flex;
-}
 
-.randomMeme {
-  width: 36vw;
-  height: auto;
-  margin-top: 3vh;
-}
+
+
   
