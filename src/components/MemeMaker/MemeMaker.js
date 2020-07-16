@@ -14,7 +14,7 @@ class MemeMaker extends Component {
 				//Bind handle method's to the constructor
 				this.handleChange = this.handleChange.bind(this)
 				this.handleSubmit = this.handleSubmit.bind(this)
-		}
+		};
 		
 		//Fetch meme data from API and setState
 		componentDidMount() {
@@ -38,7 +38,7 @@ class MemeMaker extends Component {
 			this.setState({
 				[name]: value
 			})
-		}
+		};
 
 		//Need to add prevent default to prevent page refresh
 		handleSubmit(ev) {
